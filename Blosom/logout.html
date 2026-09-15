@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout — Blossom</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-wrap">
+        <div class="auth-card">
+            <h1>Logged out</h1>
+            <p style="color:#9b5bb5;">You have been logged out successfully.</p>
+            <a href="index.html" class="btn-start" style="display:inline-block;margin-top:20px;">Login again</a>
+        </div>
+    </div>
+    <script>
+        (async function () {
+            try {
+                const raw = sessionStorage.getItem('blossom_user');
+                if (raw) {
+                    const u = JSON.parse(raw);
+                    const base = window.location.protocol === 'file:' ? 'http://localhost:5180' : window.location.origin;
+                    await fetch(base + '/api/activity', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ userId: u.userId, action: 'LOGOUT', detail: '' })
+                    });
+                }
+            } catch { /* ignore */ }
+            sessionStorage.removeItem('blossom_user');
+        })();
+    </script>
+</body>
+</html>

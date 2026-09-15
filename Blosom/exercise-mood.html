@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise & Mood — Blossom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-require-auth="true">
+    <nav class="top-bar">
+        <div class="logo">🌙 Blossom</div>
+        <div class="menu">
+            <a href="home.html">Home</a>
+            <a href="cycle-tracker.html">Cycle Tracker</a>
+            <a href="exercise-mood.html" class="active">Exercise & Mood</a>
+            <a href="pcos-guide.html">PCOS Guide</a>
+            <a href="goodie-basket.html">Goodie Basket</a>
+            <a href="about.html">About</a>
+            <a href="logout.html" class="logout-link">Logout</a>
+        </div>
+    </nav>
+
+    <main class="page-main">
+        <div class="page-title">
+            <h1>❤ Exercise & Mood Support</h1>
+            <p>Phase-based workouts and nutrition guidance</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="phase-card menstrual" data-phase="phase-menstrual">
+                <h3>1. Menstrual Phase</h3>
+                <p>Light yoga, stretching, iron-rich foods</p>
+            </div>
+            <div class="phase-card follicular" data-phase="phase-follicular">
+                <h3>2. Follicular Phase</h3>
+                <p>Cardio, strength training, protein</p>
+            </div>
+            <div class="phase-card ovulation" data-phase="phase-ovulation">
+                <h3>3. Ovulation Phase</h3>
+                <p>Flexibility, fiber, antioxidants</p>
+            </div>
+            <div class="phase-card luteal" data-phase="phase-luteal">
+                <h3>4. Luteal Phase</h3>
+                <p>Pilates, healthy fats, warm foods</p>
+            </div>
+            <div class="phase-card" data-phase="phase-lifestyle">
+                <h3>5. Lifestyle Tips</h3>
+                <p>Hydration, sleep, mindfulness</p>
+            </div>
+        </div>
+
+        <div id="phase-menstrual" class="phase-detail card-panel">
+            <h3>Menstrual Phase</h3>
+            <p><strong>Exercises:</strong> Light yoga, Stretching, Walking</p>
+            <p><strong>Foods:</strong> Iron-rich foods, Soups, Magnesium</p>
+        </div>
+        <div id="phase-follicular" class="phase-detail card-panel">
+            <h3>Follicular Phase</h3>
+            <p><strong>Exercises:</strong> Cardio, Strength training, High-intensity</p>
+            <p><strong>Foods:</strong> Protein, Eggs, Beans, Complex carbs</p>
+        </div>
+        <div id="phase-ovulation" class="phase-detail card-panel">
+            <h3>Ovulation Phase</h3>
+            <p><strong>Exercises:</strong> Maintain strength, Flexibility, Stay hydrated</p>
+            <p><strong>Foods:</strong> Fiber, Fruits, Antioxidants</p>
+        </div>
+        <div id="phase-luteal" class="phase-detail card-panel">
+            <h3>Luteal Phase</h3>
+            <p><strong>Exercises:</strong> Moderate workouts, Pilates, Cycling, Swimming</p>
+            <p><strong>Foods:</strong> Healthy fats, Complex carbs, Warm foods</p>
+        </div>
+        <div id="phase-lifestyle" class="phase-detail card-panel">
+            <h3>Lifestyle Tips</h3>
+            <ul>
+                <li>Stay hydrated (8+ glasses daily)</li>
+                <li>Reduce caffeine and sugar</li>
+                <li>Practice mindfulness and meditation</li>
+                <li>Sleep 7–9 hours</li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="css/js/app.js"></script>
+</body>
+</html>
